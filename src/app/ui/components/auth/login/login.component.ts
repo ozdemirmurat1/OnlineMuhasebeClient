@@ -15,14 +15,12 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent {
 
-    isLoading:boolean=false;
-
     constructor(
-      private _auth:AuthService
-    ) {}
+      private _auth:AuthService,
+    ) { }
    
     login(form:NgForm){
-      if(form.valid){
+      if(form.valid){      
         this._auth.login(form.value);
       }
         
